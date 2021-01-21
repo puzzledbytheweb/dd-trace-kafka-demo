@@ -1,5 +1,6 @@
 # Getting started
 Start the Datadog Agent and Kafka
+
 `docker-compose up`
 
 And then, in another terminal
