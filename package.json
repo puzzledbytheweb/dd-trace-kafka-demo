@@ -1,0 +1,61 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "nodemon dist/index",
+    "watch": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "dd-trace-demo",
+  "author": "Pedro Filipe",
+  "module": "dist/dd-trace-demo.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/dd-trace-demo.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/dd-trace-demo.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "dependencies": {
+    "dd-trace": "^0.30.4",
+    "kafkajs": "^1.15.0"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.9.1",
+    "husky": "^4.3.8",
+    "nodemon": "^2.0.7",
+    "size-limit": "^4.9.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.1.0",
+    "typescript": "^4.1.3"
+  }
+}
