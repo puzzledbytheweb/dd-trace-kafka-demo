@@ -36,6 +36,7 @@ const consumeStuff = async () => {
 
       currentSpan?.addTags({
         'custom-tag': 'YOLO',
+        // component: 'castle'
       });
       console.log('MESSAGE!!!! ------->', m.message.value?.toString());
     },
